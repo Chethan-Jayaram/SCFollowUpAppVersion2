@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMainView"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="@color/white"
+    android:padding="@dimen/_10sdp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Message"
+        android:textColor="@color/dark_text"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/roboto_bold"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/loream"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/dark_gray_text"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/roboto_regular"/>
+</LinearLayout>
+
+</layout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/allotment_background.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/bagde_background.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/bottom_nav_line.xml" value="0.136" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/edittext_rounded_border.xml" value="0.1995" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_allotment.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_assigned_status.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_chart_select.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_chart_unselect.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_communicated_status.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_dashboard.xml" value="0.122" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_door_step.xml" value="0.1995" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_joined_status.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_lead_allocation.xml" value="0.122" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_list_select.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_list_unselect.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_logout.xml" value="0.122" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_not_assigned_status.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_not_communicated_status.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_notes.xml" value="0.1995" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_pending.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_pending_status.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_pro_details.xml" value="0.122" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/ic_today_status.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/iclist_unselect.xml" value="0.195" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/minus_rect_bg.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/nav_header_background.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/nav_item_background.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/pending_background.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/pending_rect_bg.xml" value="0.209" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/spinner_bg.xml" value="0.1995" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/tab_color_selector.xml" value="0.1995" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/tab_selected.xml" value="0.1995" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/drawable/tab_unselected.xml" value="0.1995" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_add_notes.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_address_collection.xml" value="0.25" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_assigned_leads.xml" value="0.27385892116182575" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_call_dia_feedback_addressl.xml" value="0.25" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_call_dial.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_door_step.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_lead_allocation.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_lead_allocation_manually.xml" value="0.22" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_lead_entry.xml" value="0.22800256904303148" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_login.xml" value="0.34444444444444444" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_main.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_note_list.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_notification_list.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_pro_add_notes.xml" value="0.33" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_pro_dashboard_main.xml" value="0.23055555555555557" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_profile.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/activity_splash.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/app_toolbar.xml" value="0.25" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_address_list.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_assign_lead.xml" value="0.25" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_assign_leads.xml" value="0.29955947136563876" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_call_status.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.5145228215767634" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_follow_up_main.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_followup.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_history.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_lead_allotment.xml" value="0.22" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_main.xml" value="0.33" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_personal_profile.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_pro_dashboard.xml" value="0.25" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/fragment_pro_details.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/nav_header_view.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_assign_lead.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_assign_lead_manually.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_assigned_leads.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_call_status.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_chart_call_status.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_follow_up_list.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_history.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_history_new.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_notes.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_notification.xml" value="0.3536458333333333" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_pro_details.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/layout/row_sppinner_view.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3546875" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/menu/pro_bottom_nav_menu.xml" value="0.23055555555555557" />
+        <entry key="..\:/Jatin/Mobisprint/New/DGMDashboardApp/app/src/main/res/menu/side_menu.xml" value="0.3546875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

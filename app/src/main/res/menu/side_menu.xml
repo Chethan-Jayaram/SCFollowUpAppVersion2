@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/navDashboard"
+        android:title="@string/str_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/navProDetails"
+        android:icon="@drawable/ic_pro_details"
+        android:title="@string/str_pro_details" />
+    <item
+        android:id="@+id/navLeadAllotment"
+        android:icon="@drawable/ic_lead_allocation"
+        android:title="Lead Allotment" />
+    </group>
+
+</menu>

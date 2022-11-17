@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="status_blue">#1832C5</color>
+    <color name="blue">#425DF3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#F5F5FE</color>
+    <color name="toolbar_bg">#425DF3</color>
+    <color name="btn_blue">#7487F3</color>
+    <color name="green">#19851E</color>
+    <color name="red">#F11C0C</color>
+    <color name="warning">#575454</color>
+    <color name="shadow">#10000026</color>
+    <color name="sub_title">#1E2A36</color>
+    <color name="sub_title1">#556575</color>
+    <color name="sub_title2">#263643</color>
+    <color name="sub_title3">#707070</color>
+    <color name="menu_text">#8F919B</color>
+    <color name="menu_selected_text">#425DF3</color>
+    <color name="gray_text">#8F919B</color>
+    <color name="dark_gray_text">#6C6D74</color>
+    <color name="dark_text">#5C5E65</color>
+    <color name="blue_text">#425DF3</color>
+    <color name="gray_line">#DEDEDE</color>
+
+    <color name="one">#A5E464</color>
+    <color name="two">#F9CF5B</color>
+    <color name="three">#5BD9F6</color>
+    <color name="four">#F38383</color>
+    <color name="tab_background_selected">#FFFFFF</color>
+    <color name="tab_background_unselected">#F5F5F5</color>
+    <color name="color_communicated">#5BA7EB</color>
+    <color name="color_converted">#6BC161</color>
+    <color name="color_pending">#FF9898</color>
+    <color name="color_yellow">#F2AD45</color>
+    <color name="disable_yellow">#D4AE76</color>
+
+</resources>

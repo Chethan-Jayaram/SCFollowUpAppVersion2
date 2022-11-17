@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".activity.AddNotesActivity">
+
+        <include
+            android:id="@+id/llToolbar"
+            layout="@layout/app_toolbar"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llToolbar"
+            android:padding="@dimen/_10ssp"
+            android:textColor="@color/dark_gray_text"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/tvWriteTitle"
+            android:background="#E9E9FF"
+            android:text="@string/write_a_note_related_to_ashok_tata"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/btnSave"
+            app:layout_constraintTop_toBottomOf="@id/tvWriteTitle"
+            android:layout_margin="@dimen/_10ssp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/llToolbar"
+                android:textColor="@color/dark_gray_text"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="SUBJECT"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_12ssp"
+                android:id="@+id/edtSubject"
+                android:textColor="@color/dark_gray_text"
+                android:hint="@string/mention_subject_for_this_notes"
+                android:textColorHint="@color/gray_text"
+                android:fontFamily="@font/roboto_regular"
+                android:background="@drawable/spinner_bg"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/llToolbar"
+                android:textColor="@color/dark_gray_text"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="NOTES"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp"
+                android:textSize="@dimen/_12ssp"
+                android:id="@+id/edtNotes"
+                android:lines="10"
+                android:gravity="top"
+                android:textColor="@color/dark_gray_text"
+                android:hint="@string/write_your_notes_here"
+                android:textColorHint="@color/gray_text"
+                android:fontFamily="@font/roboto_regular"
+                android:background="@drawable/spinner_bg"/>
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/save"
+            android:id="@+id/btnSave"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            android:background="@color/color_yellow"
+            android:padding="@dimen/_10sdp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

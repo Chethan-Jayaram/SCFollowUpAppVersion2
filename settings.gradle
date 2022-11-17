@@ -1,0 +1,3 @@
+rootProject.name = "SCFollowUpApp"
+include ':app'
+include ':scatter'

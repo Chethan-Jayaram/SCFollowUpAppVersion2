@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:title="@string/str_dashboard"
+        android:icon="@drawable/ic_dashboard"/>
+    <item
+        android:id="@+id/followUp"
+        android:title="@string/str_follow_up"
+        android:icon="@drawable/ic_followup"/>
+    <item
+        android:id="@+id/history"
+        android:title="@string/str_history"
+        android:icon="@drawable/ic_history"/>
+    <item
+        android:id="@+id/rankPredictor"
+        android:title="@string/str_rank_predictor"
+        android:icon="@drawable/ic_rank"/>
+</menu>

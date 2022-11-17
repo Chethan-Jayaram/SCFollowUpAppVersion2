@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">SCFollowUp</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="str_user_id">UserID</string>
+    <string name="str_password">Password</string>
+    <string name="str_dashboard">Dashboard</string>
+    <string name="str_pro_details">Pro Details</string>
+    <string name="str_auto_lead_allotment">Auto Lead Allotment</string>
+    <string name="str_manual_lead_allotment">Manual Lead Allotment</string>
+    <string name="str_dgm_dashboard">DGM Dashboard</string>
+    <string name="search_by_name_here">Search by name here...</string>
+    <string name="allotment">Allotment</string>
+    <string name="pending">Pending</string>
+    <string name="view_details">VIEW DETAILS</string>
+    <string name="hide_details">HIDE DETAILS</string>
+    <string name="call_status">CALL STATUS</string>
+    <string name="despositions">DISPOSITIONS</string>
+    <string name="total_leads">Total Leads:</string>
+    <string name="assign_leads_manually">Assign Leads Manually</string>
+    <string name="lead_allocation">Lead Allocation</string>
+    <string name="submit">SUBMIT</string>
+
+    <string name="loream">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet feugiat just Mauris auctor tincidunt ante a volutpat. Etiam id nisi velit. Pellentesque tempus ex ut ex mollis, id interdum ex pellentesque. Etiam quis condimentum nisi, vitae consectetur lectus.
+    </string>
+    <string name="add_notes">ADD NOTES</string>
+    <string name="write_a_note_related_to_ashok_tata">Write a note related to Ashok Tata</string>
+    <string name="save">Save</string>
+    <string name="mention_subject_for_this_notes">Mention subject for this notes</string>
+    <string name="write_your_notes_here">Write your notes here...</string>
+    <string name="add_note">Add Note</string>
+    <string name="assigned_leads">Assigned Leads</string>
+    <string name="please_enter_userid">Please enter UserID</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="enter_your_phone_no">Enter your phone no</string>
+    <string name="phone_number">PHONE NUMBER</string>
+    <string name="basic_information">Basic Information</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="enter_your_name_here">Enter your name here</string>
+    <string name="district">DISTRICT</string>
+    <string name="gender">GENDER</string>
+    <string name="course_information">Course Information</string>
+    <string name="str_pro_dashboard">Pro Dashboard</string>
+    <string name="str_follow_up">Follow Up</string>
+    <string name="str_history">History</string>
+    <string name="str_rank_predictor">Rank Predictor</string>
+    <string name="lead_entry_form">Lead Entry Form</string>
+    <string name="add_lead">Add Lead</string>
+    <string name="address_collection">Address Collection</string>
+    <string name="enter_state">Enter state</string>
+    <string name="enter_city">Enter City</string>
+    <string name="city">City</string>
+    <string name="enter_landmark">Enter Landmark</string>
+</resources>
