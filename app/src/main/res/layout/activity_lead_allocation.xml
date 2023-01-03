@@ -165,7 +165,7 @@
                 android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/color_yellow"
+                android:background="@color/status_blue"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
                 android:enabled="false"

@@ -13,296 +13,410 @@
             android:id="@+id/llToolbar"
             layout="@layout/app_toolbar"
             app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/llToolbar"
-            app:layout_constraintBottom_toTopOf="@id/btnSave">
+            app:layout_constraintBottom_toTopOf="@id/btnSave"
+            app:layout_constraintTop_toBottomOf="@id/llToolbar">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10ssp"
-                android:orientation="vertical">
-                <androidx.appcompat.widget.AppCompatTextView
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10ssp">
+
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="@string/basic_information"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_14ssp" />
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_6sdp">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Student Name"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_10ssp" />
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edtStudentName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter student name"
-                    android:padding="@dimen/_10sdp"
-                    android:singleLine="true"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Parents Name"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_10ssp" />
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edtParentsName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter Parents name"
-                    android:padding="@dimen/_10sdp"
-                    android:singleLine="true"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Mobile No"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_10ssp" />
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edtPhoneNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:digits="1234567890"
-                    android:background="@drawable/spinner_bg"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter Mobile no"
-                    android:inputType="phone"
-                    android:padding="@dimen/_10sdp"
-                    android:singleLine="true"
-                    android:maxLength="10"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="What Happen On Call?"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_14ssp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Call Status"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_10ssp" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/llSelect"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:padding="@dimen/_3sdp"
-                    android:background="@drawable/spinner_bg"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <Spinner
-                        android:id="@+id/spSelect"
-                        style="@style/spinnerView"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
-                        android:focusable="false"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropDistrict"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:orientation="vertical"
+                        android:paddingVertical="@dimen/_16sdp">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropDistrict"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_5sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Dispositions"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_10ssp" />
+                            android:drawableStart="@drawable/ic_info_details"
+                            android:drawablePadding="@dimen/_6sdp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/basic_information"
+                            android:textColor="@color/dark_gray_text"
+                            android:textSize="@dimen/_13ssp" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:padding="@dimen/_3sdp"
-                    android:background="@drawable/spinner_bg"
-                    app:layout_constraintTop_toTopOf="parent">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:background="?android:attr/dividerVertical" />
 
-                    <Spinner
-                        android:id="@+id/spDispositions"
-                        style="@style/spinnerView"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
-                        android:focusable="false"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropDispositions"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_16sdp">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10ssp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/student_name"
+                            android:textColor="@color/dark_gray_text"
+                            android:textSize="@dimen/_10ssp" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropDispositions"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_5sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtStudentName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="@string/enter_student_name"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="@dimen/_10ssp" />
 
-                <LinearLayout
-                    android:id="@+id/llReminder"
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10ssp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/parents_name"
+                            android:textColor="@color/dark_gray_text"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtParentsName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="@string/enter_parents_name"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10ssp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/mobile_no"
+                            android:textColor="@color/dark_gray_text"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtPhoneNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:digits="1234567890"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="@string/enter_mobile_no"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray_text"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-                    <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_6sdp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10ssp"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="Reminder Date"
-                        android:textColor="@color/dark_gray_text"
-                        android:textSize="@dimen/_10ssp" />
+                        android:orientation="vertical"
+                        android:paddingVertical="@dimen/_16sdp">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvReminderDate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_10sdp"
-                        android:background="@drawable/spinner_bg"
-                        android:layout_marginTop="@dimen/_5ssp"
-                        android:fontFamily="@font/roboto_regular"
-                        android:hint="Select Reminder Date"
-                        android:textColor="@color/dark_gray_text"
-                        android:textSize="@dimen/_12ssp" />
-                </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Alternate Mobile No"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_10ssp" />
+                            android:drawableStart="@drawable/ic_info_details"
+                            android:drawablePadding="@dimen/_6sdp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/what_happen_on_call"
+                            android:textColor="@color/dark_gray_text"
+                            android:textSize="@dimen/_13ssp" />
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edtAlternetPhoneNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter Mobile no"
-                    android:inputType="phone"
-                    android:padding="@dimen/_10sdp"
-                    android:singleLine="true"
-                    android:maxLength="10"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:background="?android:attr/dividerVertical" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10ssp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Comments"
-                    android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_10ssp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_16sdp">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10ssp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/call_status"
+                                android:textColor="@color/dark_gray_text"
+                                android:textSize="@dimen/_10ssp" />
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edtComment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="top"
-                    android:hint="Enter Comment"
-                    android:lines="4"
-                    android:padding="@dimen/_10sdp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
+                            <Spinner
+                                android:id="@+id/spSelect"
+                                style="@style/spinnerView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:focusable="false"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/black" />
+
+                            <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                            <!--                    android:id="@+id/llSelect"-->
+                            <!--                    android:layout_width="match_parent"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:layout_marginTop="@dimen/_5sdp"-->
+                            <!--                    android:padding="@dimen/_3sdp"-->
+                            <!--                    android:background="@drawable/spinner_bg"-->
+                            <!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+                            <!--                    <Spinner-->
+                            <!--                        android:id="@+id/spSelect"-->
+                            <!--                        style="@style/spinnerView"-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_centerVertical="true"-->
+                            <!--                        android:layout_gravity="center"-->
+                            <!--                        android:layout_marginStart="@dimen/_3sdp"-->
+                            <!--                        android:background="@android:color/transparent"-->
+                            <!--                        android:focusable="false"-->
+                            <!--                        android:focusableInTouchMode="true"-->
+                            <!--                        android:gravity="center"-->
+                            <!--                        android:spinnerMode="dropdown"-->
+                            <!--                        android:textSize="@dimen/_10ssp"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                            <!--                        app:layout_constraintEnd_toStartOf="@id/ivDropDistrict"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                            <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+                            <!--                        android:id="@+id/ivDropDistrict"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_alignParentRight="true"-->
+                            <!--                        android:layout_centerVertical="true"-->
+                            <!--                        android:layout_gravity="center"-->
+                            <!--                        android:paddingTop="@dimen/_5sdp"-->
+                            <!--                        android:paddingEnd="@dimen/_5sdp"-->
+                            <!--                        android:paddingBottom="@dimen/_5sdp"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                            <!--                        app:srcCompat="@drawable/ic_dropdown" />-->
+                            <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/despositions"
+                                android:textColor="@color/dark_gray_text"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <Spinner
+                                android:id="@+id/spDispositions"
+                                style="@style/spinnerView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:focusable="false"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/black" />
+
+                            <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                            <!--                    android:layout_width="match_parent"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:layout_marginTop="@dimen/_5sdp"-->
+                            <!--                    android:padding="@dimen/_3sdp"-->
+                            <!--                    android:background="@drawable/spinner_bg"-->
+                            <!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+                            <!--                    <Spinner-->
+                            <!--                        android:id="@+id/spDispositions"-->
+                            <!--                        style="@style/spinnerView"-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_centerVertical="true"-->
+                            <!--                        android:layout_gravity="center"-->
+                            <!--                        android:layout_marginStart="@dimen/_3sdp"-->
+                            <!--                        android:background="@android:color/transparent"-->
+                            <!--                        android:focusable="false"-->
+                            <!--                        android:focusableInTouchMode="true"-->
+                            <!--                        android:gravity="center"-->
+                            <!--                        android:spinnerMode="dropdown"-->
+                            <!--                        android:textSize="@dimen/_10ssp"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                            <!--                        app:layout_constraintEnd_toStartOf="@id/ivDropDispositions"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                            <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+                            <!--                        android:id="@+id/ivDropDispositions"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_alignParentRight="true"-->
+                            <!--                        android:layout_centerVertical="true"-->
+                            <!--                        android:layout_gravity="center"-->
+                            <!--                        android:paddingTop="@dimen/_5sdp"-->
+                            <!--                        android:paddingEnd="@dimen/_5sdp"-->
+                            <!--                        android:paddingBottom="@dimen/_5sdp"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                            <!--                        app:srcCompat="@drawable/ic_dropdown" />-->
+                            <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                            <LinearLayout
+                                tools:visibility="visible"
+                                android:id="@+id/llReminder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10ssp"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="Reminder Date"
+                                    android:textColor="@color/dark_gray_text"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvReminderDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5ssp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="@string/select_reminder_date"
+                                    android:paddingVertical="@dimen/_7sdp"
+                                    android:textColor="@color/dark_gray_text"
+                                    android:textSize="@dimen/_10ssp" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:background="@color/black"
+                                    android:layout_height="0.7dp"/>
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10ssp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Alternate Mobile No"
+                                android:textColor="@color/dark_gray_text"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtAlternetPhoneNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:digits="1234567890"
+                                android:fontFamily="@font/roboto_regular"
+                                android:hint="@string/enter_mobile_no"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:paddingBottom="@dimen/_12sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray_text"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10ssp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/comments"
+                                android:textColor="@color/dark_gray_text"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtComment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="top"
+                                android:hint="@string/enter_comment"
+                                android:inputType="textMultiLine"
+                                android:maxLines="4"
+                                android:paddingVertical="@dimen/_12sdp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray_text"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-        <androidx.appcompat.widget.AppCompatButton
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_yellow"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:backgroundTint="@color/status_blue"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/save"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent" />

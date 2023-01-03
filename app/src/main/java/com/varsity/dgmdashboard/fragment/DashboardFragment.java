@@ -30,7 +30,9 @@ import com.varsity.dgmdashboard.utils.SnackBar;
 import com.varsity.dgmdashboard.viewmodel.DGMDashboardViewModel;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
@@ -62,6 +64,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         dashboardViewModel = new DGMDashboardViewModel(getContext());
         mBinding.tvViewDetails.setOnClickListener(this);
         getDGMDashboardData();
+        setUserData();
         mBinding.tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -107,6 +110,26 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
                 setChart();
             }
         });
+    }
+
+    private void setUserData() {
+        String userName = DGMDashboardApplication.getPreferencesManager().getUserData().getUserName();
+        mBinding.tvUserName.setText(String.format(Locale.getDefault(), getString(R.string.hi), userName));
+
+        Calendar c = Calendar.getInstance();
+        int hours = c.get(Calendar.HOUR_OF_DAY);
+        String greeting = null;
+        if (hours >= 1 && hours <= 11) {
+            greeting = "Good Morning";
+        } else if (hours <= 15) {
+            greeting = "Good Afternoon";
+        } else if (hours <= 20) {
+            greeting = "Good Evening";
+        } else if (hours <= 24) {
+            greeting = "Good Night";
+        }
+
+        mBinding.tvDayGreeting.setText(greeting);
     }
 
     private void setList() {

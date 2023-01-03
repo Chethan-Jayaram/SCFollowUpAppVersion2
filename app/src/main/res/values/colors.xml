@@ -5,7 +5,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#F5F5FE</color>
-    <color name="toolbar_bg">#425DF3</color>
+<!--    <color name="toolbar_bg">#425DF3</color>-->
+    <color name="toolbar_bg">#1832C5</color>
     <color name="btn_blue">#7487F3</color>
     <color name="green">#19851E</color>
     <color name="red">#F11C0C</color>
@@ -34,5 +35,13 @@
     <color name="color_pending">#FF9898</color>
     <color name="color_yellow">#F2AD45</color>
     <color name="disable_yellow">#D4AE76</color>
+    <color name="yellow_one">#FDC800</color>
+    <color name="yellow_two">#C59F0E</color>
+    <color name="green_one">#3DBB55</color>
+    <color name="green_two">#6ED082</color>
+    <color name="orange_one">#EC772A</color>
+    <color name="orange_two">#F49E64</color>
+    <color name="gray_one">#6A6F8C</color>
+    <color name="gray_two">#809AE3</color>
 
 </resources>

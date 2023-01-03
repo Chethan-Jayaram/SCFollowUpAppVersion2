@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -198,6 +199,10 @@ public class LeadEntryActivity extends AppCompatActivity {
     private void setGender() {
         MasterSpinnerAdapter genderAdapter = new MasterSpinnerAdapter(this, AppConstant.getGenderList());
         mBinding.edtGender.setAdapter(genderAdapter);
+        mBinding.edtGender.setOnTouchListener((v, event) -> {
+            mBinding.edtGender.showDropDown();
+            return false;
+        });
     }
 
     private void setDistrictData() {
@@ -316,18 +321,33 @@ public class LeadEntryActivity extends AppCompatActivity {
         interestedCourseList = AppConstant.getInterestedCourseList();
         MasterSpinnerAdapter interestedCourseAdapter = new MasterSpinnerAdapter(this, interestedCourseList);
         mBinding.edtCourse.setAdapter(interestedCourseAdapter);
+
+        mBinding.edtCourse.setOnTouchListener((v, event) -> {
+            mBinding.edtCourse.showDropDown();
+            return false;
+        });
     }
 
     private void setClassData() {
         classList = AppConstant.getClassList();
         MasterSpinnerAdapter classAdapter = new MasterSpinnerAdapter(this, classList);
         mBinding.edtClass.setAdapter(classAdapter);
+
+        mBinding.edtClass.setOnTouchListener((v, event) -> {
+            mBinding.edtClass.showDropDown();
+            return false;
+        });
     }
 
     private void setYearData() {
         yearList = AppConstant.getYearList();
         MasterSpinnerAdapter classAdapter = new MasterSpinnerAdapter(this, yearList);
         mBinding.edtYear.setAdapter(classAdapter);
+
+        mBinding.edtYear.setOnTouchListener((v, event) -> {
+            mBinding.edtYear.showDropDown();
+            return false;
+        });
     }
 
     private void checkValidation() {
@@ -372,7 +392,7 @@ public class LeadEntryActivity extends AppCompatActivity {
         }
 
         if (mBinding.edtCourse.getText().toString().equalsIgnoreCase("")) {
-            SnackBar.showValidationError(LeadEntryActivity.this, snakBarView, "Please select Interest Course");
+            SnackBar.showValidationError(LeadEntryActivity.this, snakBarView, "Please select Interested Course");
             return;
         }
 

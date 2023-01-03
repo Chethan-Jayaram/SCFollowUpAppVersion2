@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/_7sdp"
+    android:paddingHorizontal="@dimen/_2sdp"
+    android:paddingVertical="@dimen/_7sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvValue"
@@ -10,7 +11,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/dark_gray_text"
-        android:textSize="@dimen/_12ssp"
+        android:textSize="@dimen/_11ssp"
         android:text="@string/app_name"
         android:fontFamily="@font/roboto_regular" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,48 +26,68 @@
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/llRegion"
+                <Spinner
+                    android:id="@+id/spRegion"
+                    style="@style/spinnerView2"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textSize="@dimen/_10ssp" />
 
-                    <Spinner
-                        android:id="@+id/spRegion"
-                        style="@style/spinnerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
-                        android:focusable="false"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropRegion"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropRegion"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_3sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/llRegion"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_5sdp"-->
+<!--                    android:background="@drawable/spinner_bg"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <Spinner-->
+<!--                        android:id="@+id/spRegion"-->
+<!--                        style="@style/spinnerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginStart="@dimen/_3sdp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:focusable="false"-->
+<!--                        android:focusableInTouchMode="true"-->
+<!--                        android:gravity="center"-->
+<!--                        android:spinnerMode="dropdown"-->
+<!--                        android:textSize="@dimen/_10ssp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toStartOf="@id/ivDropRegion"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/ivDropRegion"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:paddingTop="@dimen/_5sdp"-->
+<!--                        android:paddingEnd="@dimen/_3sdp"-->
+<!--                        android:paddingBottom="@dimen/_5sdp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:srcCompat="@drawable/ic_dropdown" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
@@ -78,100 +98,139 @@
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/llGender"
+                <Spinner
+                    android:id="@+id/spGender"
+                    style="@style/spinnerView2"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textSize="@dimen/_10ssp" />
 
-                    <Spinner
-                        android:id="@+id/spGender"
-                        style="@style/spinnerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
-                        android:focusable="false"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropGender"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropGender"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_3sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/llGender"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_5sdp"-->
+<!--                    android:background="@drawable/spinner_bg"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <Spinner-->
+<!--                        android:id="@+id/spGender"-->
+<!--                        style="@style/spinnerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginStart="@dimen/_3sdp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:focusable="false"-->
+<!--                        android:focusableInTouchMode="true"-->
+<!--                        android:gravity="center"-->
+<!--                        android:spinnerMode="dropdown"-->
+<!--                        android:textSize="@dimen/_10ssp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toStartOf="@id/ivDropGender"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/ivDropGender"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:paddingTop="@dimen/_5sdp"-->
+<!--                        android:paddingEnd="@dimen/_3sdp"-->
+<!--                        android:paddingBottom="@dimen/_5sdp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:srcCompat="@drawable/ic_dropdown" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Select Category"
+                    android:text="@string/select_category"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/llCategory"
+
+
+
+                <Spinner
+                    android:id="@+id/spCategory"
+                    style="@style/spinnerView2"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textSize="@dimen/_10ssp" />
 
-                    <Spinner
-                        android:id="@+id/spCategory"
-                        style="@style/spinnerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
-                        android:focusable="false"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropCategory"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropCategory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_3sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/llCategory"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_5sdp"-->
+<!--                    android:background="@drawable/spinner_bg"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <Spinner-->
+<!--                        android:id="@+id/spCategory"-->
+<!--                        style="@style/spinnerView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginStart="@dimen/_3sdp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:focusable="false"-->
+<!--                        android:focusableInTouchMode="true"-->
+<!--                        android:gravity="center"-->
+<!--                        android:spinnerMode="dropdown"-->
+<!--                        android:textSize="@dimen/_10ssp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toStartOf="@id/ivDropCategory"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/ivDropCategory"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:paddingTop="@dimen/_5sdp"-->
+<!--                        android:paddingEnd="@dimen/_3sdp"-->
+<!--                        android:paddingBottom="@dimen/_5sdp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:srcCompat="@drawable/ic_dropdown" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
@@ -187,25 +246,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter marks"
-                    android:inputType="number"
-                    android:padding="@dimen/_10sdp"
-                    android:textColor="@color/dark_gray_text"
+                    android:hint="@string/enter_marks"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
                     android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_10ssp" />
+
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
             android:id="@+id/btnFind"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_yellow"
+            android:layout_height="@dimen/_45sdp"
+            android:backgroundTint="@color/status_blue"
             android:fontFamily="@font/roboto_bold"
-            android:text="Find Now"
+            android:text="@string/find_now"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent" />

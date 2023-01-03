@@ -258,7 +258,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Address Details"
+                    android:text="@string/address_details"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_14ssp" />
 
@@ -721,9 +721,10 @@
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_yellow"
+            android:background="@color/status_blue"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/save"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent" />

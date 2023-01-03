@@ -13,78 +13,86 @@
             android:id="@+id/llToolbar"
             layout="@layout/app_toolbar"
             app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWriteTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/llToolbar"
+            android:background="#E9E9FF"
+            android:fontFamily="@font/roboto_medium"
             android:padding="@dimen/_10ssp"
+            android:text="@string/write_a_note_related_to_ashok_tata"
             android:textColor="@color/dark_gray_text"
             android:textSize="@dimen/_12ssp"
-            android:fontFamily="@font/roboto_medium"
-            android:id="@+id/tvWriteTitle"
-            android:background="#E9E9FF"
-            android:text="@string/write_a_note_related_to_ashok_tata"/>
+            app:layout_constraintTop_toBottomOf="@id/llToolbar" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/btnSave"
-            app:layout_constraintTop_toBottomOf="@id/tvWriteTitle"
             android:layout_margin="@dimen/_10ssp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btnSave"
+            app:layout_constraintTop_toBottomOf="@id/tvWriteTitle">
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/llToolbar"
-                android:textColor="@color/dark_gray_text"
-                android:textSize="@dimen/_12ssp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="SUBJECT"/>
+                android:text="@string/subject"
+                android:textColor="@color/dark_gray_text"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintTop_toBottomOf="@id/llToolbar" />
+
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSubject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:textSize="@dimen/_12ssp"
-                android:id="@+id/edtSubject"
-                android:textColor="@color/dark_gray_text"
-                android:hint="@string/mention_subject_for_this_notes"
-                android:textColorHint="@color/gray_text"
                 android:fontFamily="@font/roboto_regular"
-                android:background="@drawable/spinner_bg"/>
+                android:hint="@string/mention_subject_for_this_notes"
+                android:paddingBottom="@dimen/_12sdp"
+                android:textColor="@color/dark_gray_text"
+                android:textColorHint="@color/gray_text"
+                android:textSize="@dimen/_12ssp" />
+
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/llToolbar"
-                android:textColor="@color/dark_gray_text"
-                android:textSize="@dimen/_12ssp"
                 android:layout_marginTop="@dimen/_10ssp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="NOTES"/>
+                android:text="@string/notes"
+                android:textColor="@color/dark_gray_text"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintTop_toBottomOf="@id/llToolbar" />
+
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtNotes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_7sdp"
-                android:textSize="@dimen/_12ssp"
-                android:id="@+id/edtNotes"
-                android:lines="10"
-                android:gravity="top"
-                android:textColor="@color/dark_gray_text"
-                android:hint="@string/write_your_notes_here"
-                android:textColorHint="@color/gray_text"
                 android:fontFamily="@font/roboto_regular"
-                android:background="@drawable/spinner_bg"/>
+                android:gravity="top"
+                android:hint="@string/write_your_notes_here"
+                android:lines="10"
+                android:paddingBottom="@dimen/_12sdp"
+                android:textColor="@color/dark_gray_text"
+                android:textColorHint="@color/gray_text"
+                android:textSize="@dimen/_12ssp" />
 
         </LinearLayout>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="@string/save"
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
-            android:textSize="@dimen/_12ssp"
-            android:textColor="@color/white"
-            android:background="@color/color_yellow"
-            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:backgroundTint="@color/status_blue"
+            android:fontFamily="@font/roboto_medium"
+            app:cornerRadius="@dimen/_5sdp"
             android:gravity="center"
-            android:fontFamily="@font/roboto_medium"/>
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

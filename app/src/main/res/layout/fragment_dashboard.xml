@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:scatter="http://schemas.android.com/apk/res-auto">
+    xmlns:scatter="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -15,156 +16,295 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp">
+                android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/llCampaign"
+                    android:id="@+id/clTopBar"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
+                    android:layout_height="wrap_content"
+                    android:background="@color/status_blue"
+                    android:padding="@dimen/_10sdp"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <Spinner
-                        android:id="@+id/spCampaign"
-                        style="@style/spinnerView"
-                        android:layout_width="match_parent"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
-                        android:focusable="false"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropCampaign"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toStartOf="@id/ivPriority"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Hi, Ashok" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropCampaign"
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDayGreeting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_3sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="@string/good_morning"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPriority"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/bg_circle_yellow"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/tvDayGreeting"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
+                        app:layout_constraintTop_toTopOf="@id/tvUserName"
+                        tools:text="60" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLblTodayPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:text="@string/today_s_priority"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/tvPriority"
+                        app:layout_constraintEnd_toStartOf="@id/tvPriority"
+                        app:layout_constraintTop_toTopOf="@id/tvPriority" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivPriority"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/tvLblTodayPriority"
+                        app:layout_constraintEnd_toStartOf="@id/tvLblTodayPriority"
+                        app:layout_constraintTop_toTopOf="@id/tvLblTodayPriority"
+                        app:srcCompat="@drawable/ic_priority" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/llCampaign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/yellow_rect_bg"
+                        android:backgroundTint="@color/white"
+                        android:paddingHorizontal="@dimen/_4sdp"
+                        app:layout_constraintTop_toBottomOf="@id/tvDayGreeting">
+
+                        <Spinner
+                            android:id="@+id/spCampaign"
+                            style="@style/spinnerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:background="@android:color/transparent"
+                            android:focusable="false"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/ivDropCampaign"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivDropCampaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_3sdp"
+                            android:paddingBottom="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_dropdown" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/llTotalLead"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_15ssp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/spinner_bg"
                     android:paddingTop="@dimen/_10sdp"
                     android:paddingBottom="@dimen/_10sdp"
-                    app:layout_constraintTop_toBottomOf="@id/llCampaign">
+                    app:layout_constraintTop_toBottomOf="@id/clTopBar">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvTotalLeads"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="Total Leads:"
-                        android:textColor="@color/gray_text"
-                        android:textSize="@dimen/_16ssp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--                    //////////////////////////start-->
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvTotalLeadsCount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:fontFamily="@font/roboto_bold"
-                        tools:text="100"
-                        android:textColor="@color/blue_text"
-                        android:textSize="@dimen/_16ssp"
-                        app:layout_constraintStart_toEndOf="@id/tvTotalLeads"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineVertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+
+                    <!--                    /////total start////-->
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/llAllotment"
+                        android:id="@+id/llTotal"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:background="@drawable/allotment_background"
+                        android:layout_height="0dp"
                         android:padding="@dimen/_10ssp"
-                        app:layout_constraintEnd_toStartOf="@id/llPending"
+                        app:layout_constraintBottom_toTopOf="@id/line"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvTotalLeads">
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/ivAllotment"
-                            android:layout_width="@dimen/_25sdp"
-                            android:layout_height="@dimen/_25sdp"
-                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:id="@+id/ivTotal"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            app:layout_constraintBottom_toTopOf="@id/tvTotalLeadsCount"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_allotment" />
+                            app:layout_constraintVertical_chainStyle="spread"
+                            app:srcCompat="@drawable/ic_total_allotment" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/tvAllotment"
+                            android:id="@+id/tvTotalLeadsCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/gray_one"
+                            android:textSize="@dimen/_18ssp"
+                            app:layout_constraintBottom_toTopOf="@id/tvTotal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ivTotal"
+                            tools:text="75" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/total_leads_"
+                            android:textColor="@color/gray_one"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTotalLeadsCount" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--                    /// total end///-->
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/llFollowUp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivFollowUp"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/tvFollowup"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_followup_calender" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFollowup"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_15sdp"
                             android:fontFamily="@font/roboto_regular"
                             android:text="@string/allotment"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_13ssp"
-                            app:layout_constraintStart_toEndOf="@id/ivAllotment"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:textColor="@color/green_one"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivFollowUp"
+                            app:layout_constraintTop_toBottomOf="@id/tvAllotmentCount" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvAllotmentCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_15sdp"
-                            android:fontFamily="@font/roboto_light"
-                            tools:text="75"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_20ssp"
-                            app:layout_constraintStart_toEndOf="@id/ivAllotment"
-                            app:layout_constraintTop_toBottomOf="@id/tvAllotment" />
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/green_one"
+                            android:textSize="@dimen/_16ssp"
+                            app:layout_constraintEnd_toEndOf="@id/tvFollowup"
+                            app:layout_constraintStart_toStartOf="@id/tvFollowup"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            tools:text="75" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:background="@color/gray_line"
+                        app:layout_constraintEnd_toEndOf="@id/llFollowUp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+                        app:layout_constraintTop_toBottomOf="@id/llFollowUp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:background="@color/gray_line"
+                        app:layout_constraintBottom_toTopOf="@id/line"
+                        app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/llPending"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginEnd="@dimen/_10sdp"
-                        android:background="@drawable/pending_background"
                         android:padding="@dimen/_10ssp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/llAllotment"
-                        app:layout_constraintTop_toBottomOf="@id/tvTotalLeads">
+                        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+                        app:layout_constraintTop_toBottomOf="@id/llFollowUp">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivPending"
-                            android:layout_width="@dimen/_25sdp"
-                            android:layout_height="@dimen/_25sdp"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/tvPending"
+                            app:layout_constraintHorizontal_chainStyle="packed"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_pending" />
+                            app:srcCompat="@drawable/ic_pending_red" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvPending"
@@ -173,23 +313,27 @@
                             android:layout_marginStart="@dimen/_15ssp"
                             android:fontFamily="@font/roboto_regular"
                             android:text="@string/pending"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_14ssp"
+                            android:textColor="@color/orange_one"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@id/ivPending"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toBottomOf="@id/tvPendingCount" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvPendingCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_15ssp"
-                            android:fontFamily="@font/roboto_light"
-                            tools:text="25"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_20ssp"
-                            app:layout_constraintStart_toEndOf="@id/ivPending"
-                            app:layout_constraintTop_toBottomOf="@id/tvPending" />
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/orange_one"
+                            android:textSize="@dimen/_16ssp"
+                            app:layout_constraintEnd_toEndOf="@id/tvPending"
+                            app:layout_constraintStart_toStartOf="@id/tvPending"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="25" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--                    /////////////////////////end-->
+
 
                     <View
                         android:id="@+id/line"
@@ -197,7 +341,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:background="@color/gray_line"
-                        app:layout_constraintTop_toBottomOf="@id/llAllotment" />
+                        app:layout_constraintTop_toBottomOf="@id/llPending" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/llPieChart"
@@ -211,14 +355,15 @@
                             android:id="@+id/pieChart"
                             android:layout_width="@dimen/_120sdp"
                             android:layout_height="@dimen/_120sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             scatter:aboutChart="About Your Chart"
                             scatter:aboutTextColor="@color/white"
                             scatter:equalPartition="false"
-                            scatter:textSize="32"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             scatter:textColor="@color/dark_gray_text"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            scatter:textSize="32" />
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -239,8 +384,7 @@
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/ivPendingStatus"
                                     android:layout_width="@dimen/_14ssp"
-                                    android:layout_height="@dimen/_14ssp"
-                                    />
+                                    android:layout_height="@dimen/_14ssp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvPendingStatus"
@@ -264,8 +408,7 @@
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/ivAssignedStatus"
                                     android:layout_width="@dimen/_14ssp"
-                                    android:layout_height="@dimen/_14ssp"
-                                    />
+                                    android:layout_height="@dimen/_14ssp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvAssignedStatus"
@@ -287,9 +430,9 @@
                                 android:orientation="horizontal">
 
                                 <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivNotAssignedStatus"
                                     android:layout_width="@dimen/_14ssp"
-                                    android:layout_height="@dimen/_14ssp"
-                                    android:id="@+id/ivNotAssignedStatus" />
+                                    android:layout_height="@dimen/_14ssp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvNotAssignedStatus"
@@ -311,9 +454,9 @@
                                 android:orientation="horizontal">
 
                                 <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivCommunicatedStatus"
                                     android:layout_width="@dimen/_14ssp"
-                                    android:layout_height="@dimen/_14ssp"
-                                    android:id="@+id/ivCommunicatedStatus" />
+                                    android:layout_height="@dimen/_14ssp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvCommunicatedStatus"
@@ -335,9 +478,9 @@
                                 android:orientation="horizontal">
 
                                 <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivNotCommunicatedStatus"
                                     android:layout_width="@dimen/_14ssp"
-                                    android:layout_height="@dimen/_14ssp"
-                                    android:id="@+id/ivNotCommunicatedStatus"  />
+                                    android:layout_height="@dimen/_14ssp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvNotCommunicatedStatus"
@@ -359,9 +502,9 @@
                                 android:orientation="horizontal">
 
                                 <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivJoinedStatus"
                                     android:layout_width="@dimen/_14ssp"
-                                    android:layout_height="@dimen/_14ssp"
-                                    android:id="@+id/ivJoinedStatus" />
+                                    android:layout_height="@dimen/_14ssp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvJoinedStatus"
@@ -383,9 +526,9 @@
                                 android:orientation="horizontal">
 
                                 <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivTodaysStatus"
                                     android:layout_width="@dimen/_14ssp"
-                                    android:layout_height="@dimen/_14ssp"
-                                    android:id="@+id/ivTodaysStatus" />
+                                    android:layout_height="@dimen/_14ssp" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/tvTodaysStatus"
@@ -410,10 +553,12 @@
                         android:layout_margin="@dimen/_10sdp"
                         android:drawableEnd="@drawable/ic_dropdown"
                         android:drawablePadding="@dimen/_7sdp"
-                        android:fontFamily="@font/roboto_medium"
+                        android:drawableTint="@color/status_blue"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="@string/view_details"
                         android:textColor="@color/blue_text"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/llPieChart" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -422,9 +567,8 @@
                     android:id="@+id/llOverView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_15ssp"
-                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/spinner_bg"
                     android:paddingBottom="@dimen/_10sdp"
                     app:layout_constraintTop_toBottomOf="@id/llTotalLead">
@@ -432,7 +576,7 @@
                     <com.google.android.material.tabs.TabLayout
                         android:id="@+id/tabs"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_gravity="bottom"
                         android:layout_margin="@dimen/_2ssp"
                         app:layout_constraintTop_toTopOf="parent"
@@ -454,43 +598,48 @@
                             android:text="@string/despositions" />
 
                     </com.google.android.material.tabs.TabLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clType"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/clType"
-                        android:visibility="visible"
-                        android:paddingEnd="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:visibility="visible"
                         app:layout_constraintTop_toBottomOf="@id/tabs">
+
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="@dimen/_10ssp"
+                            android:fontFamily="@font/roboto_medium"
                             android:text="Overall View"
                             android:textSize="@dimen/_12ssp"
-                            android:fontFamily="@font/roboto_medium"
-                            android:layout_marginStart="@dimen/_10ssp"/>
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivList"
                             android:layout_width="@dimen/_24sdp"
                             android:layout_height="@dimen/_24sdp"
-                            app:srcCompat="@drawable/ic_list_unselect"
-                            app:layout_constraintTop_toTopOf="parent"
+                            android:padding="@dimen/_2sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_list_unselect" />
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivChar"
-                            android:padding="@dimen/_5sdp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_chart_unselect"
-                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_marginEnd="@dimen/_10ssp"
+                            android:padding="@dimen/_2sdp"
                             app:layout_constraintEnd_toStartOf="@id/ivList"
-                            android:layout_marginEnd="@dimen/_10ssp"/>
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_chart_unselect" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <View
                         android:id="@+id/line2"
                         android:layout_width="match_parent"
@@ -498,25 +647,28 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:background="@color/gray_line"
                         app:layout_constraintTop_toBottomOf="@id/clType" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clCallStatus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:visibility="gone"
-                        app:layout_constraintTop_toBottomOf="@id/line2"
-                        android:id="@+id/clCallStatus">
+                        app:layout_constraintTop_toBottomOf="@id/line2">
+
                         <com.intrusoft.scatter.PieChart
                             android:id="@+id/pieChartCallStatus"
                             android:layout_width="@dimen/_120sdp"
                             android:layout_height="@dimen/_120sdp"
+                            android:layout_margin="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             scatter:aboutChart="About Your Chart"
                             scatter:aboutTextColor="@color/white"
                             scatter:equalPartition="false"
-                            scatter:textSize="32"
-                            android:layout_margin="@dimen/_5sdp"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             scatter:textColor="@color/dark_gray_text"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            scatter:textSize="32" />
+
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rvChartCallStatus"
                             android:layout_width="0dp"
@@ -531,24 +683,26 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clDespositions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:visibility="gone"
-                        app:layout_constraintTop_toBottomOf="@id/line2"
-                        android:id="@+id/clDespositions">
+                        app:layout_constraintTop_toBottomOf="@id/line2">
+
                         <com.intrusoft.scatter.PieChart
                             android:id="@+id/pieChartDespositions"
                             android:layout_width="@dimen/_120sdp"
                             android:layout_height="@dimen/_120sdp"
+                            android:layout_margin="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             scatter:aboutChart="About Your Chart"
                             scatter:aboutTextColor="@color/white"
                             scatter:equalPartition="false"
-                            scatter:textSize="32"
-                            android:layout_margin="@dimen/_5sdp"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             scatter:textColor="@color/dark_gray_text"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            scatter:textSize="32" />
+
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rvChartDespositions"
                             android:layout_width="0dp"
@@ -560,27 +714,28 @@
                             app:layout_constraintTop_toTopOf="parent"
                             tools:listitem="@layout/row_chart_call_status" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rvCallStatus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        tools:listitem="@layout/row_call_status"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        android:orientation="vertical"
                         android:layout_marginTop="@dimen/_5sdp"
-                        app:layout_constraintTop_toBottomOf="@id/line2" />
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintTop_toBottomOf="@id/line2"
+                        tools:listitem="@layout/row_call_status" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rvDespositions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        tools:listitem="@layout/row_call_status"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        android:orientation="vertical"
                         android:layout_marginTop="@dimen/_5sdp"
-                        app:layout_constraintTop_toBottomOf="@id/line2" />
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintTop_toBottomOf="@id/line2"
+                        tools:listitem="@layout/row_call_status" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>

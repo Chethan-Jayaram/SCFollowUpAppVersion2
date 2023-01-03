@@ -38,14 +38,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/llToolbar" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAddNotes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_yellow"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:backgroundTint="@color/status_blue"
             android:fontFamily="@font/roboto_medium"
             android:gravity="center"
+            app:cornerRadius="@dimen/_5sdp"
             android:padding="@dimen/_10sdp"
+            android:textAllCaps="false"
             android:text="@string/add_notes"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"

@@ -19,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
 import com.varsity.dgmdashboard.R;
 import com.varsity.dgmdashboard.activity.AddressCollectionActivity;
-import com.varsity.dgmdashboard.activity.CallDialActivity;
 import com.varsity.dgmdashboard.activity.CallDialFeedbackAddressActivity;
 import com.varsity.dgmdashboard.databinding.RowAddressListBinding;
 import com.varsity.dgmdashboard.listener.PhoneCallListener;

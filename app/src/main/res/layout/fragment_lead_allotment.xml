@@ -65,7 +65,7 @@
                         android:fontFamily="@font/roboto_medium"
                         android:text="@string/total_leads"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -75,58 +75,93 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_10sdp"
-                        android:fontFamily="@font/roboto_bold"
+                        android:fontFamily="@font/roboto_medium"
                         android:text="100"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/llArea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/spinner_bg"
-                    android:elevation="@dimen/_10ssp"
+                    android:orientation="vertical"
                     app:layout_constraintTop_toBottomOf="@id/llTotalLead">
 
                     <Spinner
                         android:id="@+id/spArea"
-                        style="@style/spinnerView"
+                        style="@style/spinnerView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
                         android:focusable="false"
                         android:focusableInTouchMode="true"
                         android:gravity="center"
                         android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropArea"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:textSize="@dimen/_10ssp" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropArea"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_5sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <View
+                        android:id="@+id/viewArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="@color/black" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <!--                <com.google.android.material.card.MaterialCardView-->
+                <!--                    android:id="@+id/llArea"-->
+                <!--                    app:cardUseCompatPadding="true"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_10sdp"-->
+                <!--                    app:cardCornerRadius="@dimen/_5sdp"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/llTotalLead">-->
+
+                <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content">-->
+
+                <!--                        <Spinner-->
+                <!--                            android:id="@+id/spArea"-->
+                <!--                            style="@style/spinnerView"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:layout_marginStart="@dimen/_3sdp"-->
+                <!--                            android:background="@android:color/transparent"-->
+                <!--                            android:focusable="false"-->
+                <!--                            android:focusableInTouchMode="true"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:spinnerMode="dropdown"-->
+                <!--                            android:textSize="@dimen/_10ssp"-->
+                <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                            app:layout_constraintEnd_toStartOf="@id/ivDropArea"-->
+                <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                <!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                        <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                            android:id="@+id/ivDropArea"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_alignParentRight="true"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:paddingTop="@dimen/_5sdp"-->
+                <!--                            android:paddingEnd="@dimen/_5sdp"-->
+                <!--                            android:paddingBottom="@dimen/_5sdp"-->
+                <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                <!--                            app:srcCompat="@drawable/ic_dropdown" />-->
+                <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <!--                </com.google.android.material.card.MaterialCardView>-->
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -165,17 +200,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/llLeadData" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSubmit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/color_yellow"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:backgroundTint="@color/status_blue"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
                 android:padding="@dimen/_10sdp"
                 android:text="@string/submit"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_5sdp"
                 app:layout_constraintBottom_toBottomOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

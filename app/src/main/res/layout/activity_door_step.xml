@@ -33,14 +33,14 @@
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/basic_information"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_13ssp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Student Name"
+                    android:text="@string/student_name"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
@@ -49,21 +49,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter student name"
-                    android:padding="@dimen/_10sdp"
+                    android:hint="@string/enter_student_name"
+                    android:paddingBottom="@dimen/_12sdp"
                     android:singleLine="true"
                     android:textColor="@color/dark_gray_text"
                     android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_10ssp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Mobile No"
+                    android:text="@string/mobile_no"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
@@ -72,23 +71,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter Mobile no"
-                    android:inputType="phone"
                     android:digits="1234567890"
-                    android:padding="@dimen/_10sdp"
-                    android:singleLine="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/enter_mobile_no"
+                    android:inputType="phone"
                     android:maxLength="10"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:singleLine="true"
                     android:textColor="@color/dark_gray_text"
                     android:textColorHint="@color/gray_text"
                     android:textSize="@dimen/_12ssp" />
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Parents Name"
+                    android:text="@string/parents_name"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
@@ -98,23 +97,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter Parents name"
-                    android:padding="@dimen/_10sdp"
+                    android:hint="@string/enter_parents_name"
+                    android:paddingBottom="@dimen/_10sdp"
                     android:singleLine="true"
                     android:textColor="@color/dark_gray_text"
                     android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_10ssp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Select Time"
+                    android:text="@string/select_time"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_13ssp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -127,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_medium"
                         android:padding="@dimen/_3sdp"
-                        android:text="IN TIME"
+                        android:text="@string/in_time"
                         android:textColor="@color/dark_gray_text"
                         android:textSize="@dimen/_10ssp"
                         app:layout_constraintEnd_toStartOf="@id/tvOut"
@@ -144,8 +142,8 @@
                         android:drawableEnd="@drawable/ic_timer"
                         android:fontFamily="@font/roboto_medium"
                         android:gravity="center|start"
+                        android:hint="@string/time_"
                         android:padding="@dimen/_7sdp"
-                        android:hint="Time"
                         android:textColor="@color/dark_gray_text"
                         android:textSize="@dimen/_10ssp"
                         app:layout_constraintEnd_toStartOf="@id/tvOut"
@@ -158,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_medium"
                         android:padding="@dimen/_3sdp"
-                        android:text="OUT TIME"
+                        android:text="@string/out_time"
                         android:textColor="@color/dark_gray_text"
                         android:textSize="@dimen/_10ssp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -174,8 +172,8 @@
                         android:drawableEnd="@drawable/ic_timer"
                         android:fontFamily="@font/roboto_medium"
                         android:gravity="center|start"
+                        android:hint="@string/time_"
                         android:padding="@dimen/_7sdp"
-                        android:hint="Time"
                         android:textColor="@color/dark_gray_text"
                         android:textSize="@dimen/_10ssp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -217,61 +215,80 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Others"
+                    android:text="@string/others"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_13ssp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Dispositions"
+                    android:text="@string/despositions"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+
+                <Spinner
+                    android:id="@+id/spDispositions"
+                    style="@style/spinnerView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:padding="@dimen/_3sdp"
-                    android:background="@drawable/spinner_bg"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textSize="@dimen/_10ssp" />
 
-                    <Spinner
-                        android:id="@+id/spDispositions"
-                        style="@style/spinnerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:background="@android:color/transparent"
-                        android:focusable="false"
-                        android:focusableInTouchMode="true"
-                        android:gravity="center"
-                        android:spinnerMode="dropdown"
-                        android:textSize="@dimen/_10ssp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/ivDropDispositions"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="@color/black" />
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/ivDropDispositions"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:paddingTop="@dimen/_5sdp"
-                        android:paddingEnd="@dimen/_5sdp"
-                        android:paddingBottom="@dimen/_5sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_dropdown" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/_5sdp"-->
+                <!--                    android:padding="@dimen/_3sdp"-->
+                <!--                    android:background="@drawable/spinner_bg"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+                <!--                    <Spinner-->
+                <!--                        android:id="@+id/spDispositions"-->
+                <!--                        style="@style/spinnerView"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:layout_marginStart="@dimen/_3sdp"-->
+                <!--                        android:background="@android:color/transparent"-->
+                <!--                        android:focusable="false"-->
+                <!--                        android:focusableInTouchMode="true"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:spinnerMode="dropdown"-->
+                <!--                        android:textSize="@dimen/_10ssp"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toStartOf="@id/ivDropDispositions"-->
+                <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                        android:id="@+id/ivDropDispositions"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentRight="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:paddingTop="@dimen/_5sdp"-->
+                <!--                        android:paddingEnd="@dimen/_5sdp"-->
+                <!--                        android:paddingBottom="@dimen/_5sdp"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                <!--                        app:srcCompat="@drawable/ic_dropdown" />-->
+                <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                 <LinearLayout
                     android:id="@+id/llReminder"
@@ -279,12 +296,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:visibility="gone">
+
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10ssp"
                         android:fontFamily="@font/roboto_medium"
-                        android:text="Reminder Date"
+                        android:text="@string/reminder_date"
                         android:textColor="@color/dark_gray_text"
                         android:textSize="@dimen/_10ssp" />
 
@@ -292,13 +310,18 @@
                         android:id="@+id/tvReminderDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/_10sdp"
-                        android:background="@drawable/spinner_bg"
                         android:layout_marginTop="@dimen/_5ssp"
+                        android:background="@drawable/spinner_bg"
                         android:fontFamily="@font/roboto_regular"
-                        android:hint="Select Reminder Date"
+                        android:hint="@string/select_reminder_date"
+                        android:paddingVertical="@dimen/_7sdp"
                         android:textColor="@color/dark_gray_text"
                         android:textSize="@dimen/_12ssp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="@color/black" />
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -306,7 +329,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Alternate Mobile No"
+                    android:text="@string/alternate_mobile_no"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp" />
 
@@ -315,49 +338,47 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
+                    android:digits="1234567890"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="Enter Mobile no"
+                    android:hint="@string/enter_mobile_no"
                     android:inputType="phone"
                     android:maxLength="10"
-                    android:digits="1234567890"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_12sdp"
                     android:singleLine="true"
                     android:textColor="@color/dark_gray_text"
                     android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_10ssp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Comment/Feedback"
+                    android:text="@string/comment_feedback_"
                     android:textColor="@color/dark_gray_text"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_13ssp" />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edtComment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/spinner_bg"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="top"
-                    android:hint="Enter Comment"
-                    android:lines="4"
-                    android:padding="@dimen/_10sdp"
+                    android:hint="@string/enter_comment"
+                    android:maxLines="4"
+                    android:paddingBottom="@dimen/_12sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textColorHint="@color/gray_text"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_10ssp" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_yellow"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:backgroundTint="@color/status_blue"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/save"
             android:textColor="@color/white"

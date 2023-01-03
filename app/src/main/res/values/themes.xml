@@ -23,7 +23,14 @@
 
     <style name="spinnerView">
         <item name="android:fontFamily">@font/roboto_regular</item>
-        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="spinnerView2">
+        <item name="android:background">@drawable/ic_custom_spinner_arrow</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 

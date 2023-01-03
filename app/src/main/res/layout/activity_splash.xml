@@ -20,19 +20,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="@dimen/_14ssp"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/sub_title"
             android:layout_marginTop="@dimen/_30ssp"
-            android:text="Welcome to"/>
+            android:text="@string/welcome_to"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="@dimen/_10ssp"
-            android:textSize="@dimen/_16ssp"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            android:text="Sri Chaitanya Educational Institutions\nIndia"/>
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/sub_title"
+            android:text="@string/sri_chaitanya_educational_institutions_nindia"/>
     </LinearLayout>
 </layout>

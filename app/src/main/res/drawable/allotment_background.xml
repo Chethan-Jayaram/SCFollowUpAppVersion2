@@ -9,9 +9,9 @@
                         android:type="linear"
                         android:angle="180"
                         android:startColor="#9FACF5"
-                        android:endColor="#5F76F3" />
+                        android:endColor="@color/status_blue" />
                     <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
-                    <stroke android:width="1dp" android:color="#6A7EE1" />
+                    <stroke android:width="1dp" android:color="@color/status_blue" />
                 </shape>
             </item>
         </layer-list>

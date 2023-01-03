@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Date Of Joining"
+                    android:text="@string/date_of_joining"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -64,7 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Campus Name"
+                    android:text="@string/campus_name"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -84,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Designation"
+                    android:text="@string/designation"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -104,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Subject"
+                    android:text="@string/subject"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -124,7 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Manager"
+                    android:text="@string/manager"
                     android:layout_marginTop="@dimen/_10ssp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>

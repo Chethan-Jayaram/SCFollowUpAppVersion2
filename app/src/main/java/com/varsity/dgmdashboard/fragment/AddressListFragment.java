@@ -40,7 +40,7 @@ public class AddressListFragment extends Fragment {
     private View snakBarView;
     private DashboardViewModel dashboardViewModel;
     private AddressListAdapter addressListAdapter;
-    private String mobileNo="";
+    private String mobileNo = "";
     private ArrayList<CallStatusListResponseModel> addressList;
 
     public static AddressListFragment getNewInstance(Context context) {
@@ -89,9 +89,9 @@ public class AddressListFragment extends Fragment {
             dashboardViewModel.getCallStatusList(snakBarView).observe(getViewLifecycleOwner(), responseModel -> {
                 if (responseModel != null) {
                     if (responseModel.size() != 0) {
-                        addressList=responseModel;
+                        addressList = responseModel;
                         mBinding.tvNoData.setVisibility(View.GONE);
-                        addressListAdapter=new AddressListAdapter(responseModel);
+                        addressListAdapter = new AddressListAdapter(responseModel);
                         mBinding.rvToday.setAdapter(addressListAdapter);
                     }
                 }
@@ -104,42 +104,43 @@ public class AddressListFragment extends Fragment {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         boolean permissionGranted = false;
-        switch(requestCode){
+        switch (requestCode) {
             case 9:
-                permissionGranted = grantResults[0]== PackageManager.PERMISSION_GRANTED;
+                permissionGranted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                 break;
         }
-        if(permissionGranted){
+        if (permissionGranted) {
             call(mobileNo);
-        }else {
+        } else {
             Toast.makeText(getContext(), "You don't assign permission.", Toast.LENGTH_SHORT).show();
         }
     }
 
 
-    private void call(String mobileNumber){
+    private void call(String mobileNumber) {
         if (ActivityCompat.checkSelfPermission(getContext(),
                 Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:"+mobileNumber));
+            callIntent.setData(Uri.parse("tel:" + mobileNumber));
             getActivity().startActivity(callIntent);
-        }else{
+        } else {
             Toast.makeText(getContext(), "You don't assign permission.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    void filter(String text){
+    void filter(String text) {
         ArrayList<CallStatusListResponseModel> temp = new ArrayList();
-        for(CallStatusListResponseModel d: addressList){
-            if(d.getStudentName().toLowerCase().contains(text.toLowerCase()) || d.getMobileNo().toString().toLowerCase().contains(text.toLowerCase())){
-                temp.add(d);
+        if (addressList != null)
+            for (CallStatusListResponseModel d : addressList) {
+                if (d.getStudentName().toLowerCase().contains(text.toLowerCase()) || d.getMobileNo().toString().toLowerCase().contains(text.toLowerCase())) {
+                    temp.add(d);
+                }
             }
-        }
-        if (temp!=null && temp.size()!=0){
+        if (temp != null && temp.size() != 0) {
             mBinding.tvNoData.setVisibility(View.GONE);
             mBinding.rvToday.setVisibility(View.VISIBLE);
             addressListAdapter.updateList(temp);
-        }else {
+        } else {
             mBinding.rvToday.setVisibility(View.GONE);
             mBinding.tvNoData.setVisibility(View.VISIBLE);
         }

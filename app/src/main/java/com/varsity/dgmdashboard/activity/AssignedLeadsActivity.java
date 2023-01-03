@@ -39,7 +39,7 @@ public class AssignedLeadsActivity extends AppCompatActivity {
     }
 
     private void setToolbar() {
-        mBinding.llToolbar.tvToolbarTitle.setText("Assign Leads");
+        mBinding.llToolbar.tvToolbarTitle.setText(getString(R.string.assign_leads));
         mBinding.llToolbar.llToolbarLeft.setVisibility(View.VISIBLE);
         mBinding.llToolbar.ivToolbarLeft.setImageResource(R.drawable.ic_back);
 
