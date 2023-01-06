@@ -5,76 +5,100 @@
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
         android:background="@color/white"
-        android:padding="@dimen/_7sdp"
-        android:id="@+id/clMainView"
-        android:layout_marginTop="@dimen/_5sdp">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/ivUser"
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:background="@drawable/circle_bg"
-            android:fontFamily="@font/roboto_medium"
-            android:gravity="center"
-            tools:text="A"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_20ssp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/ivDoor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:srcCompat="@drawable/ic_door_step"/>
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ivDoor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="@dimen/_7sdp"
-            android:id="@+id/ivNoteAdd"
-            app:srcCompat="@drawable/ic_notes"/>
+        android:id="@+id/clMainView">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_7sdp"
+
+            android:id="@+id/clTop"
+            android:padding="@dimen/_7sdp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ivNoteAdd"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ivUser"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                tools:text="A"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/ivDoor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/ic_door_step"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivDoor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:id="@+id/ivNoteAdd"
+                app:srcCompat="@drawable/ic_notes"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivNoteAdd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:id="@+id/ivCall"
+                app:srcCompat="@drawable/ic_call"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_medium"
+                tools:text="Ashok Tata"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/_10ssp"
+                android:ellipsize="end"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintBottom_toTopOf="@id/tvMobileNo"
+                app:layout_constraintEnd_toStartOf="@id/ivCall"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintTop_toTopOf="@id/ivUser" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/roboto_regular"
+                tools:text="9898989898"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintBottom_toBottomOf="@id/ivUser"
+                app:layout_constraintStart_toEndOf="@id/ivUser"
+                app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_marginTop="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/clTop"
+            android:id="@+id/viewDiv"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="@dimen/_7sdp"
-            android:id="@+id/ivCall"
-            app:srcCompat="@drawable/ic_call"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvUserName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:fontFamily="@font/roboto_medium"
-            tools:text="Ashok Tata"
-            android:textColor="@color/dark_gray_text"
-            android:textSize="@dimen/_12ssp"
-            app:layout_constraintEnd_toStartOf="@id/ivCall"
-            android:layout_marginEnd="@dimen/_5sdp"
-            app:layout_constraintStart_toEndOf="@id/ivUser"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvMobileNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:fontFamily="@font/roboto_regular"
-            tools:text="9898989898"
-            android:textColor="@color/dark_gray_text"
-            android:textSize="@dimen/_10ssp"
-            app:layout_constraintStart_toEndOf="@id/ivUser"
-            app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+            android:background="@color/div_color"/>
 
 
 

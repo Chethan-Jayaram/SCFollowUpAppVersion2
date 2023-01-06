@@ -45,7 +45,7 @@ public class FollowupListAdapter extends RecyclerView.Adapter<FollowupListAdapte
 
     @Override
     public void onBindViewHolder(@NonNull FollowupListAdapter.DataViewHolder holder, int position) {
-        holder.mBinding.tvUserName.setText(list.get(position).getName());
+        holder.mBinding.tvUserName.setText(list.get(position).getName().trim());
         holder.mBinding.tvMobileNo.setText("" + list.get(position).getMobile());
         if (list.get(position).getName() != null) {
             holder.mBinding.ivUser.setText(list.get(position).getName().trim().substring(0, 1));

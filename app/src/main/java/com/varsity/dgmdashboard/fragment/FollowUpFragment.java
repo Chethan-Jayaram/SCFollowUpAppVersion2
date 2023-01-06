@@ -58,7 +58,7 @@ public class FollowUpFragment extends Fragment {
     }
 
     private void init() {
-        followList=new ArrayList<>();
+        followList = new ArrayList<>();
         snakBarView = getActivity().findViewById(android.R.id.content);
         dashboardViewModel = new DashboardViewModel(getContext());
         layoutManager = new LinearLayoutManager(getContext());
@@ -102,6 +102,20 @@ public class FollowUpFragment extends Fragment {
         });
     }
 
+    private void setRecyclerVisibility(boolean isVisible) {
+        if (isVisible) {
+            mBinding.mcvPending.setVisibility(View.VISIBLE);
+            mBinding.tvNoData.setVisibility(View.GONE);
+            mBinding.rvFollowup.setVisibility(View.VISIBLE);
+        }
+        else{
+            mBinding.mcvPending.setVisibility(View.GONE);
+            mBinding.tvNoData.setVisibility(View.VISIBLE);
+            mBinding.rvFollowup.setVisibility(View.GONE);
+        }
+
+    }
+
     private void getFollowupListData() {
         if (DGMDashboardApplication.getInstance().isNetworkAvailable()) {
             dashboardViewModel.getFollowupList(snakBarView, "Pending", pageNo).observe(getViewLifecycleOwner(), responseModel -> {
@@ -112,10 +126,13 @@ public class FollowUpFragment extends Fragment {
                         mBinding.tvNoData.setVisibility(View.GONE);
                         followupListAdapter = new FollowupListAdapter(responseModel);
                         mBinding.rvFollowup.setAdapter(followupListAdapter);
+                        setRecyclerVisibility(true);
                     } else {
+                        setRecyclerVisibility(false);
                         isLoadMore = false;
                     }
                 } else {
+                    setRecyclerVisibility(false);
                     isLoadMore = false;
                 }
             });
@@ -146,20 +163,22 @@ public class FollowUpFragment extends Fragment {
         }
     }
 
-    void filter(String text){
+    void filter(String text) {
         ArrayList<LeadStatusListResponseModel> temp = new ArrayList();
-        for(LeadStatusListResponseModel d: followList){
-            if(d.getName().toLowerCase().contains(text.toLowerCase()) || d.getMobile().toString().toLowerCase().contains(text.toLowerCase())){
+        for (LeadStatusListResponseModel d : followList) {
+            if (d.getName().toLowerCase().contains(text.toLowerCase()) || d.getMobile().toString().toLowerCase().contains(text.toLowerCase())) {
                 temp.add(d);
             }
         }
-        if (temp!=null && temp.size()!=0){
-            mBinding.tvNoData.setVisibility(View.GONE);
-            mBinding.rvFollowup.setVisibility(View.VISIBLE);
+        if (temp != null && temp.size() != 0) {
+//            mBinding.tvNoData.setVisibility(View.GONE);
+//            mBinding.rvFollowup.setVisibility(View.VISIBLE);
+            setRecyclerVisibility(true);
             followupListAdapter.updateList(temp);
-        }else {
-            mBinding.rvFollowup.setVisibility(View.GONE);
-            mBinding.tvNoData.setVisibility(View.VISIBLE);
+        } else {
+            setRecyclerVisibility(false);
+//            mBinding.rvFollowup.setVisibility(View.GONE);
+//            mBinding.tvNoData.setVisibility(View.VISIBLE);
         }
     }
 

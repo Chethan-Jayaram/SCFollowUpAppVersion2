@@ -118,15 +118,13 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         Calendar c = Calendar.getInstance();
         int hours = c.get(Calendar.HOUR_OF_DAY);
-        String greeting = null;
-        if (hours >= 1 && hours <= 11) {
+        String greeting;
+        if (hours <= 11) {
             greeting = "Good Morning";
-        } else if (hours <= 15) {
+        } else if (hours <= 17) {
             greeting = "Good Afternoon";
-        } else if (hours <= 20) {
+        } else  {
             greeting = "Good Evening";
-        } else if (hours <= 24) {
-            greeting = "Good Night";
         }
 
         mBinding.tvDayGreeting.setText(greeting);

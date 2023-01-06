@@ -623,7 +623,7 @@
                             android:id="@+id/ivList"
                             android:layout_width="@dimen/_24sdp"
                             android:layout_height="@dimen/_24sdp"
-                            android:padding="@dimen/_2sdp"
+                            android:padding="@dimen/_5sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -634,7 +634,7 @@
                             android:layout_width="@dimen/_24sdp"
                             android:layout_height="@dimen/_24sdp"
                             android:layout_marginEnd="@dimen/_10ssp"
-                            android:padding="@dimen/_2sdp"
+                            android:padding="@dimen/_3sdp"
                             app:layout_constraintEnd_toStartOf="@id/ivList"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/ic_chart_unselect" />

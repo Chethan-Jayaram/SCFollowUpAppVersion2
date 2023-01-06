@@ -19,7 +19,7 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/btnAddLead"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -693,7 +693,7 @@
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivList"
                             android:layout_width="@dimen/_24sdp"
-                            android:padding="@dimen/_2sdp"
+                            android:padding="@dimen/_5sdp"
                             android:layout_height="@dimen/_24sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -705,7 +705,7 @@
                             android:layout_width="@dimen/_24sdp"
                             android:layout_height="@dimen/_24sdp"
                             android:layout_marginEnd="@dimen/_10ssp"
-                            android:padding="@dimen/_2sdp"
+                            android:padding="@dimen/_3sdp"
                             app:layout_constraintEnd_toStartOf="@id/ivList"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/ic_chart_unselect" />

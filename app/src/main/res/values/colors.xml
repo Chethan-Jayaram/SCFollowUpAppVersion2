@@ -23,6 +23,7 @@
     <color name="dark_text">#5C5E65</color>
     <color name="blue_text">#425DF3</color>
     <color name="gray_line">#DEDEDE</color>
+    <color name="div_color">#CBCBCB</color>
 
     <color name="one">#A5E464</color>
     <color name="two">#F9CF5B</color>

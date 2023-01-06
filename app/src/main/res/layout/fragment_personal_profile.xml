@@ -23,7 +23,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Employee Name"
+                    android:text="@string/employee_name"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
 
@@ -31,18 +31,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.userName != null ? userData.userName : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Date Of Birth"
+                    android:text="@string/date_of_birth"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -51,18 +54,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
-                    android:textColor="@color/black"
+                    android:paddingVertical="@dimen/_7sdp"                    android:textColor="@color/black"
                     android:text='@{userData.dob != null ? userData.dob : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="PAN Card Details"
+                    android:text="@string/pan_card_details"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -71,18 +76,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
                     android:padding="@dimen/_10sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.panNo != null ? userData.panNo : "-"}'
                     android:textSize="@dimen/_12ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="PF Number"
+                    android:text="@string/pf_number"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -91,18 +99,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.pfNo != null ? userData.pfNo : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Aadhaar Details"
+                    android:text="@string/aadhaar_details"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -111,12 +122,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.aadhar != null ? userData.aadhar : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
@@ -131,18 +145,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.gender != null ? userData.gender : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Blood Group"
+                    android:text="@string/blood_group"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -151,18 +168,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.bloodGroup != null ? userData.bloodGroup : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Mobile Number"
+                    android:text="@string/mobile_number"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -171,18 +191,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.mobileNo != null ? userData.mobileNo : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="City"
+                    android:text="@string/city"
                     android:layout_marginTop="@dimen/_7sdp"
                     android:textColor="@color/dark_gray_text"
                     android:textSize="@dimen/_10ssp"/>
@@ -191,12 +214,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.city != null ? userData.city : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_10ssp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
@@ -211,24 +237,43 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:background="@drawable/edittext_rounded_border"
                     android:fontFamily="@font/roboto_regular"
-                    android:padding="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:text='@{userData.state != null ? userData.state : "-"}'
-                    android:textSize="@dimen/_12ssp"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogout"
+                    android:textSize="@dimen/_10ssp"/>
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:backgroundTint="@color/color_yellow"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Sign Out"
+                    android:background="@color/black"
+                    android:layout_height="0.7dp"/>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:layout_width="wrap_content"
+                    app:icon="@drawable/ic_logout"
+                    android:id="@+id/btnLogout"
+                    android:layout_gravity="center"
+                    app:iconTint="@color/white"
                     android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/status_blue"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:textSize="@dimen/_12ssp"
-                    app:cornerRadius="@dimen/_5ssp"/>
+                    android:text="@string/sign_out"
+                    android:layout_height="wrap_content"/>
+
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/btnLogout"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_45sdp"-->
+<!--                    android:layout_marginTop="@dimen/_15sdp"-->
+<!--                    android:backgroundTint="@color/color_yellow"-->
+<!--                    android:fontFamily="@font/roboto_bold"-->
+<!--                    android:text="@string/sign_out"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/_12ssp"-->
+<!--                    app:cornerRadius="@dimen/_5sdp"/>-->
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

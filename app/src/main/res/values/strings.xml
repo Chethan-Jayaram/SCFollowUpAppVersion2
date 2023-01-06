@@ -129,4 +129,14 @@
     <string name="last_dialed_call">Last Dialed Call</string>
     <string name="redial">Redial</string>
     <string name="mobile_number">Mobile Number</string>
+    <string name="employee_id">Employee ID</string>
+    <string name="employee_name">Employee Name</string>
+    <string name="pan_card_details">PAN Card Details</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="aadhaar_details">Aadhaar Details</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="pf_number">PF Number</string>
+    <string name="today_priority">Today\'s Priority</string>
+    <string name="pending_calls">Pending Calls</string>
 </resources>
