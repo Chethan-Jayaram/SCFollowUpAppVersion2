@@ -349,6 +349,12 @@ public class DGMDashboardRepo {
         Helper.showPopupProgress(context,true);
         final MutableLiveData<Void> mutableLiveData = new MutableLiveData<>();
         ApiInterface apiService = DGMDashboardApplication.getRetrofitClient().create(ApiInterface.class);
+
+        for (int i = 0;i<request.getAssignTo().size();i++){
+            if (request.getAssignTo().get(i).getLeadCount() == 0){
+                request.getAssignTo().get(i).setLeadCount(1);
+            }
+        }
         apiService.submitLeadManual(request).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
